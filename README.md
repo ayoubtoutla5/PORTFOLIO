@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — Toutla Ayoub
 
-## Getting Started
+Portfolio professionnel de **Toutla Ayoub**, Dessinateur-Projeteur Béton Armé & Technicien Génie Civil basé à Casablanca, Maroc.
 
-First, run the development server:
+## Stack technique
+
+| Outil | Version |
+|---|---|
+| Next.js | 16 |
+| React | 19 |
+| TypeScript | 5 |
+| Tailwind CSS | 4 |
+| Framer Motion | 12 |
+| Lucide React | 1 |
+
+## Sections
+
+- **Hero** — Présentation animée avec titre et appel à l'action
+- **Profil** — Bio, valeurs et parcours en bref
+- **Compétences** — Logiciels (barres de progression), savoir-faire technique (badges) et langues
+- **Expérience** — Structure Valley & Astra Conseil avec missions détaillées
+- **Formations** — Diplômes et certifications
+- **Projets** — Galerie filtrée par catégorie
+- **Contact** — Formulaire et liens directs
+
+## Lancer en local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/          # Layout et page principale (Next.js App Router)
+components/
+  layout/     # Navbar, Footer, ScrollProgress
+  sections/   # Hero, About, Skills, Experience, Education, Projects, Contact
+  ui/         # Composants réutilisables
+lib/
+  data.ts     # Toutes les données du portfolio (experiences, skills, projects…)
+public/
+  cv/         # CV PDF téléchargeable
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Email : ayoubtoutla5@gmail.com
+- LinkedIn : [Ayoub Toutla](https://www.linkedin.com/in/ayoub-toutla-312127322/)
+- Tél : 07-62-57-38-37
