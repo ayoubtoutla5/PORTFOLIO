@@ -13,20 +13,6 @@ const stagger: Variants = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
 
-function ProgressBar({ level, delay = 0 }: { level: number; delay?: number }) {
-  return (
-    <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-      <motion.div
-        className="h-full rounded-full bg-gradient-to-r from-gold-dark via-gold to-gold-light"
-        initial={{ width: 0 }}
-        whileInView={{ width: `${level}%` }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.9, delay, ease: "easeOut" }}
-      />
-    </div>
-  );
-}
-
 
 export default function Skills() {
   return (
@@ -67,14 +53,14 @@ export default function Skills() {
               <h3 className="font-display text-xl text-white mt-1">Outils DAO / Calcul</h3>
             </motion.div>
 
-            <div className="flex flex-col gap-5">
-              {skills.software.map((tool, i) => (
-                <motion.div key={tool.name} variants={fadeUp}>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="font-body text-sm text-silver">{tool.name}</span>
-                    <span className="font-code text-xs text-gold">{tool.level}%</span>
-                  </div>
-                  <ProgressBar level={tool.level} delay={i * 0.08} />
+            <div className="flex flex-col gap-3">
+              {skills.software.map((tool) => (
+                <motion.div
+                  key={tool.name}
+                  variants={fadeUp}
+                  className="py-2.5 px-3 rounded-lg border border-gold/10 bg-gold/5 hover:border-gold/30 hover:bg-gold/10 transition-colors"
+                >
+                  <span className="font-body text-sm text-silver">{tool.name}</span>
                 </motion.div>
               ))}
             </div>
